@@ -75,8 +75,8 @@ The full dataset is massive. I am hosting a **Public Torrent** of the compacted 
 
 ## 📊 Progress Tracking
 Current status of the conversion and seeding:
-- [x] Index 0-1000 (Seeding)
-- [ ] Index 1001-2000 (Processing...)
+- [x] Index 0-1000 (Processing...)
+- [ ] Index 1001-2000 (Pending)
 - [ ] Index 2001-3000 (Pending)
 - [ ] Index 3001-4096 (Pending)
       
