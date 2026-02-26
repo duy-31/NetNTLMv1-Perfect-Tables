@@ -42,7 +42,7 @@ The original data and research were provided by **Mandiant (Google Cloud)**. Thi
 ## 🔍 Usage Example
 ```powershell
 .\crackalack_lookup.exe .\rtc a9d83c6ca210be62
-
+```
 ---
 
 ## 🚀 How to Use 
@@ -51,7 +51,7 @@ The original data and research were provided by **Mandiant (Google Cloud)**. Thi
 3. **Crack:** Run `crackalack_lookup` against your captured hash (CT1 or CT2 value):
    ```powershell
    .\crackalack_lookup.exe FOLDER CT1 (or CT2)
-
+   ```
 <center><img width="2048" height="1463" alt="image" src="https://github.com/user-attachments/assets/161b314f-3a6b-439f-a0db-f9e0e2cfe5ca" />
 <img width="800" height="731" alt="image" src="https://github.com/user-attachments/assets/2a698749-a021-4de0-950d-0a6fcdd023ba" /></center>
 
