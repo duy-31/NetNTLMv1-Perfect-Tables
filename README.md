@@ -52,8 +52,13 @@ The original data and research were provided by **Mandiant (Google Cloud)**. Thi
    ```powershell
    .\crackalack_lookup.exe FOLDER CT1 (or CT2)
    ```
-<center><img width="2048" height="1463" alt="image" src="https://github.com/user-attachments/assets/161b314f-3a6b-439f-a0db-f9e0e2cfe5ca" />
-<img width="800" height="731" alt="image" src="https://github.com/user-attachments/assets/2a698749-a021-4de0-950d-0a6fcdd023ba" /></center>
+<center><img width="1024" height="731" alt="image" src="https://github.com/user-attachments/assets/161b314f-3a6b-439f-a0db-f9e0e2cfe5ca" /></center>
+
+---
+
+## 📺 Demo
+  
+<center><img width="800" height="731" alt="image" src="https://github.com/user-attachments/assets/2a698749-a021-4de0-950d-0a6fcdd023ba" /></center>
 
 ---
 
