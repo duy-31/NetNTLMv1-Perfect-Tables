@@ -37,7 +37,7 @@ The original data and research were provided by **Mandiant (Google Cloud)**. Thi
 3. **Compact:** `rt2rtc -s 32 -e 48 -p` (Removes duplicates).
 4. **Clean:** Moves `.rtc` to final storage, deletes `.rt` source.
 
-<center><img width="712" height="476" alt="image" src="https://github.com/user-attachments/assets/d8e27326-c369-4e9f-add5-806517330e6f" /></center>center>
+<center><img width="712" height="476" alt="image" src="https://github.com/user-attachments/assets/d8e27326-c369-4e9f-add5-806517330e6f" /></center>
 
 
 ---
