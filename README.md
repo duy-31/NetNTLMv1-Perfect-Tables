@@ -58,7 +58,7 @@ The original data and research were provided by **Mandiant (Google Cloud)**. Thi
 
 ## 📺 Demo
   
-<center><img width="800" height="731" alt="image" src="https://github.com/user-attachments/assets/2a698749-a021-4de0-950d-0a6fcdd023ba" /></center>
+https://github.com/user-attachments/assets/c2c5f152-1a87-480a-a98b-644531d11251
 
 ---
 
