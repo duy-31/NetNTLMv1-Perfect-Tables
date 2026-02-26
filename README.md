@@ -69,7 +69,17 @@ The full dataset is massive. I am hosting a **Public Torrent** of the compacted 
 
 > [!IMPORTANT]
 > **A Call to Action:** I will seed this for as long as possible, but **I need the community to help.** If you have spare storage (NAS/Servers) and high bandwidth, please keep this torrent active. The more people seed, the faster and more permanent this resource becomes for everyone.
+> **"A Rainbow Table is only as strong as its Seeding Swarm."** > If you find this data useful for your audits, please **Give Back by Seeding.**
 
+---
+
+## 📊 Progress Tracking
+Current status of the conversion and seeding:
+- [x] Index 0-1000 (Seeding)
+- [ ] Index 1001-2000 (Processing...)
+- [ ] Index 2001-3000 (Pending)
+- [ ] Index 3001-4096 (Pending)
+      
 ---
 ## ⚖️ Responsibilities & Disclaimer
 By using this project, you agree to use it only for authorized security auditing. The authors assume no liability for misuse or illegal activities.
