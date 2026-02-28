@@ -17,8 +17,9 @@ By converting the original `.rt` files, we achieve:
 The original data and research were provided by **Mandiant (Google Cloud)**. This project builds upon their work to make these tables more accessible for security auditors.
 - **Reference:** [Mandiant Blog: Net-NTLMv1 Deprecation](https://cloud.google.com/blog/topics/threat-intelligence/net-ntlmv1-deprecation-rainbow-tables)
 - **Data:** [Google Research](https://console.cloud.google.com/storage/browser/net-ntlmv1-tables)
-- **Engine:** [jtesta/rainbowcrackalack](https://github.com/jtesta/rainbowcrackalack) (Original GPU & rt2rtc)
+- **Engine:** [jtesta/rainbowcrackalack](https://github.com/jtesta/rainbowcrackalack) (Original GPU)
 - **Logic:** [blurbdust/rainbowcrackalack](https://github.com/blurbdust/rainbowcrackalack) (NTLMv1 Support)
+- **Implementation:** [Projet-rainbowcrack](http://project-rainbowcrack.com) ( rtsort & rt2rtc)
 
 ---
 
@@ -37,12 +38,18 @@ The original data and research were provided by **Mandiant (Google Cloud)**. Thi
 3. **Compact:** `rt2rtc -s 32 -e 48 -p` (Removes duplicates).
 4. **Clean:** Moves `.rtc` to final storage, deletes `.rt` source.
 
-<center><img width="712" height="476" alt="image" src="https://github.com/user-attachments/assets/d8e27326-c369-4e9f-add5-806517330e6f" /></center>
+- uncompress everything so that look like this:
+<img width="1207" height="195" alt="image" src="https://github.com/user-attachments/assets/8af5849c-4246-44d3-b6ab-f6e6d17910fc" />
 
+- edit the file rtc-pipline.ps1 and change all the need paths
+<img width="953" height="192" alt="image" src="https://github.com/user-attachments/assets/c76712c2-b3bc-44cd-a4e9-f35533af718c" />
+
+- run the rtc-pipline.ps1 and wait (a long time!) make sure you have enough space!
+<center><img width="712" height="476" alt="image" src="https://github.com/user-attachments/assets/d8e27326-c369-4e9f-add5-806517330e6f" /></center>
 
 ---
 
-## 🔍 Usage Example
+## 🔍 Usage Example of the RTC rainbow tables (crack the same CT2 given by Mandiant)
 ```powershell
 .\crackalack_lookup.exe .\rtc a9d83c6ca210be62
 ```
