@@ -19,14 +19,14 @@ This repository (or torrent) provides a reformatted version of the Rainbow Table
 
 ## 📄 License & Attribution
 
-[cite_start]The work of Mandiant (Google Cloud) is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)**. [cite: 1]
+The work of Mandiant (Google Cloud) is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
 
 * **Original Author:** Mandiant (Google Cloud).
 * **Original Source:** `gs://net-ntlmv1-tables/`.
-* [cite_start]**Official License Link:** [https://storage.googleapis.com/net-ntlmv1-tables/LICENSE](https://storage.googleapis.com/net-ntlmv1-tables/LICENSE). [cite: 1]
-* [cite_start]**Full License Terms:** [Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [cite: 1]
+* **Official License Link:** [https://storage.googleapis.com/net-ntlmv1-tables/LICENSE](https://storage.googleapis.com/net-ntlmv1-tables/LICENSE).
+* **Full License Terms:** [Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-> [cite_start]**Note on Redistributions:** Under the CC BY 4.0 license, you are free to share, copy, and redistribute the material in any medium or format, and to adapt, remix, or build upon the material for any purpose, provided you give appropriate credit. [cite: 1]
+> **Note on Redistributions:** Under the CC BY 4.0 license, you are free to share, copy, and redistribute the material in any medium or format, and to adapt, remix, or build upon the material for any purpose, provided you give appropriate credit.
 
 ---
 
@@ -36,7 +36,7 @@ The original data and research were provided by **Mandiant (Google Cloud)**. Thi
 - **Data:** [Google Research](https://console.cloud.google.com/storage/browser/net-ntlmv1-tables)
 - **Engine:** [jtesta/rainbowcrackalack](https://github.com/jtesta/rainbowcrackalack) (Original GPU)
 - **Logic:** [blurbdust/rainbowcrackalack](https://github.com/blurbdust/rainbowcrackalack) (NTLMv1 Support)
-- **Implementation:** [Projet-rainbowcrack](http://project-rainbowcrack.com) ( rtsort & rt2rtc)
+- **Implementation:** [Project-rainbowcrack](http://project-rainbowcrack.com) ( rtsort & rt2rtc)
 
 ---
 
