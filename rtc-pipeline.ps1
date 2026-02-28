@@ -18,7 +18,7 @@ $json = Invoke-RestMethod -Uri $ListUrl
 if (-not $json.items) { Write-Host "Aucun fichier trouvé."; exit }
 
 # --- MODIFICATION POUR REPRISE ---
-$IndexDeReprise = 1719
+$IndexDeReprise = 0 # ou un numero d index pour eviter de recommencer a zero
 # ---------------------------------
 
 foreach ($item in $json.items) {
@@ -101,3 +101,4 @@ foreach ($item in $json.items) {
     Write-Host "=== Terminé pour l'index $Index ===" -ForegroundColor Green
 
 }
+
