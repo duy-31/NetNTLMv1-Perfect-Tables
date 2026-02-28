@@ -13,7 +13,7 @@ By converting the original `.rt` files, we achieve:
 
 ---
 
-# Mandiant Net-NTLMv1 Rainbow Tables (RTC Format)
+# Mandiant Net-NTLMv1 Rainbow Tables (RT Format)
 
 This repository (or torrent) provides a reformatted version of the Rainbow Tables released by **Mandiant (Google Cloud)**. The original dataset was published to accelerate the deprecation of the Net-NTLMv1 protocol by making hash collisions easily demonstrable for security professionals.
 
