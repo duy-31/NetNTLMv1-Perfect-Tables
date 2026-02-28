@@ -13,6 +13,23 @@ By converting the original `.rt` files, we achieve:
 
 ---
 
+# Mandiant Net-NTLMv1 Rainbow Tables (RTC Format)
+
+This repository (or torrent) provides a reformatted version of the Rainbow Tables released by **Mandiant (Google Cloud)**. The original dataset was published to accelerate the deprecation of the Net-NTLMv1 protocol by making hash collisions easily demonstrable for security professionals.
+
+## 📄 License & Attribution
+
+[cite_start]The work of Mandiant (Google Cloud) is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)**. [cite: 1]
+
+* **Original Author:** Mandiant (Google Cloud).
+* **Original Source:** `gs://net-ntlmv1-tables/`.
+* [cite_start]**Official License Link:** [https://storage.googleapis.com/net-ntlmv1-tables/LICENSE](https://storage.googleapis.com/net-ntlmv1-tables/LICENSE). [cite: 1]
+* [cite_start]**Full License Terms:** [Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [cite: 1]
+
+> [cite_start]**Note on Redistributions:** Under the CC BY 4.0 license, you are free to share, copy, and redistribute the material in any medium or format, and to adapt, remix, or build upon the material for any purpose, provided you give appropriate credit. [cite: 1]
+
+---
+
 ## 📝 Credits & Research
 The original data and research were provided by **Mandiant (Google Cloud)**. This project builds upon their work to make these tables more accessible for security auditors.
 - **Reference:** [Mandiant Blog: Net-NTLMv1 Deprecation](https://cloud.google.com/blog/topics/threat-intelligence/net-ntlmv1-deprecation-rainbow-tables)
@@ -93,3 +110,5 @@ Current status of the conversion and seeding:
 ---
 ## ⚖️ Responsibilities & Disclaimer
 By using this project, you agree to use it only for authorized security auditing. The authors assume no liability for misuse or illegal activities.
+
+
