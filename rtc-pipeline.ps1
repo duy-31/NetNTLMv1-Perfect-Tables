@@ -12,10 +12,14 @@ if (!(Test-Path $RootPath)) { New-Item -ItemType Directory -Path $RootPath | Out
 if (!(Test-Path $OutputPath)) { New-Item -ItemType Directory -Path $OutputPath | Out-Null }
 
 # ============================
-# LECTURE DE LA LISTE JSON
+# LECTURE DE LA LISTE JSON ET FILTRE
 # ============================
 $json = Invoke-RestMethod -Uri $ListUrl
 if (-not $json.items) { Write-Host "Aucun fichier trouvé."; exit }
+
+# --- MODIFICATION POUR REPRISE ---
+$IndexDeReprise = 1719
+# ---------------------------------
 
 foreach ($item in $json.items) {
     $FileName = $item.name.Replace("tables/","")
@@ -23,7 +27,16 @@ foreach ($item in $json.items) {
 
     # Extraction de l'index (ex: ..._0.rt -> 0)
     $BaseName = [System.IO.Path]::GetFileNameWithoutExtension($FileName)
-    $Index = ($BaseName -split "_")[-1]
+    $IndexStr = ($BaseName -split "_")[-1]
+    
+    # Conversion en entier pour une comparaison fiable
+    [int]$Index = 0
+    if (-not [int]::TryParse($IndexStr, [ref]$Index)) { continue }
+
+    # Sauter si l'index est inférieur à 1719
+    if ($Index -lt $IndexDeReprise) {
+        continue
+    }
 
     # Définition des chemins
     $TargetLocalDir = Join-Path $RootPath $Index
@@ -86,4 +99,5 @@ foreach ($item in $json.items) {
     }
 
     Write-Host "=== Terminé pour l'index $Index ===" -ForegroundColor Green
+
 }
