@@ -7,16 +7,19 @@ $SortCommand  = "L:\duy-31-mandiant-ntlmv1\rainbowcrack-1.8-win64\rtsort.exe"
 $RtcCommand   = "L:\duy-31-mandiant-ntlmv1\rainbowcrack-1.8-win64\rt2rtc.exe"
 $OutputPath   = "H:\NTLMv1\"
 
-# Helper function to update the console title
+# --- RÉGLAGE DE REPRISE ---
+$IndexDeReprise = 0  # Changez ce nombre pour sauter manuellement les premiers index (ex: 500)
+
+# Fonction pour mettre à jour le titre de la console
 function Write-Title {
     param([string]$Text)
     $Host.UI.RawUI.WindowTitle = $Text
 }
 
 # ============================
-# RÉCUPÉRATION COMPLÈTE (PAGINATION)
+# RÉCUPÉRATION DE LA LISTE (API)
 # ============================
-Write-Host "--- Connexion à Google Storage API ---" -ForegroundColor Cyan
+Write-Host "--- Récupération de la liste des fichiers (API) ---" -ForegroundColor Cyan
 $AllItems = [System.Collections.Generic.List[PSObject]]::new()
 $Token = ""
 
@@ -26,7 +29,7 @@ do {
         $Response = Invoke-RestMethod -Uri $Uri
         if ($Response.items) {
             $Response.items | ForEach-Object { $AllItems.Add($_) }
-            Write-Host "Récupérés : $($AllItems.Count) éléments..." -ForegroundColor Gray
+            Write-Host "Fichiers trouvés : $($AllItems.Count)..." -ForegroundColor Gray
         }
         $Token = $Response.nextPageToken
     } catch {
@@ -36,9 +39,9 @@ do {
 } while ($Token)
 
 # ============================
-# TRI ET FILTRAGE NUMÉRIQUE
+# TRI NUMÉRIQUE
 # ============================
-Write-Host "Analyse et tri des fichiers..." -ForegroundColor Green
+Write-Host "Tri des données en cours..." -ForegroundColor Green
 $SortedItems = $AllItems | ForEach-Object {
     $FName = $_.name.Replace("tables/","")
     if ($FName -notlike "*.rt") { return $null }
@@ -55,73 +58,75 @@ $SortedItems = $AllItems | ForEach-Object {
             BaseName = $BName
         }
     }
-} | Where-Object { $_ -ne $null } | Sort-Object Index
+} | Where-Object { $null -ne $_ } | Sort-Object Index
 
 # ============================
-# BOUCLE DE TRAITEMENT PRINCIPALE
+# BOUCLE DE TRAITEMENT
 # ============================
 foreach ($Entry in $SortedItems) {
     $Index = $Entry.Index
+    
+    # 1. SKIP MANUEL (via la variable en haut)
+    if ($Index -lt $IndexDeReprise) {
+        continue
+    }
+
     $TargetLocalDir   = Join-Path $RootPath $Index
     $FinalDestination = Join-Path $OutputPath $Index
     $LocalFile        = Join-Path $TargetLocalDir $Entry.FileName
 
-    # 1. Vérification d'existence (Skip automatique)
+    # 2. SKIP AUTOMATIQUE (Vérification sur N:)
+    # On skip si le dossier existe ET n'est pas vide
     if (Test-Path $FinalDestination) {
-        if (Get-ChildItem $FinalDestination -Filter "*.rtc") {
-            Write-Host "Index $Index : Déjà traité sur H:. Passage au suivant." -ForegroundColor DarkGray
+        $ExistingFiles = Get-ChildItem $FinalDestination -ErrorAction SilentlyContinue
+        if ($ExistingFiles.Count -gt 0) {
+            Write-Host "Index $Index : Déjà présent sur $OutputPath. Passage au suivant." -ForegroundColor DarkGray
             continue
         }
     }
 
-    # Mise à jour du titre de la fenêtre
+    # Mise à jour du titre et affichage console
     $Remaining = $SortedItems.Count - ($SortedItems.IndexOf($Entry))
-    Write-Title "Reste à traiter : $Remaining | Index actuel : $Index"
-
+    Write-Title "Reste : $Remaining | Index : $Index"
     Write-Host "`n=== [$(Get-Date -Format 'HH:mm:ss')] TRAITEMENT INDEX : $Index ===" -ForegroundColor Cyan
 
     try {
-        # 2. Préparation Dossier
+        # 3. Création dossier local
         if (!(Test-Path $TargetLocalDir)) { New-Item -ItemType Directory -Path $TargetLocalDir -Force | Out-Null }
 
-        # 3. Téléchargement
+        # 4. Téléchargement (BITS)
         Write-Host " -> Étape 1 : Téléchargement..." -NoNewline
-        Start-BitsTransfer -Source $Entry.Item.mediaLink -Destination $LocalFile -DisplayName "RT-Index-$Index"
-        Write-Host " Terminé." -ForegroundColor Green
+        Start-BitsTransfer -Source $Entry.Item.mediaLink -Destination $LocalFile -DisplayName "RT-Download-$Index"
+        Write-Host " OK." -ForegroundColor Green
 
-        # 4. Tri (rtsort)
-        Write-Host " -> Étape 2 : rtsort (Tri disque)..." -ForegroundColor Yellow
+        # 5. Tri (rtsort)
+        Write-Host " -> Étape 2 : rtsort..." -ForegroundColor Yellow
         & $SortCommand $TargetLocalDir
-        if ($LASTEXITCODE -ne 0) { throw "Erreur rtsort sur l'index $Index" }
+        if ($LASTEXITCODE -ne 0) { throw "Erreur lors du rtsort" }
 
-        # 5. Conversion (rt2rtc)
-        Write-Host " -> Étape 3 : rt2rtc (Compression)..." -ForegroundColor Magenta
-        $OldPath = Get-Location
+        # 6. Compression (rt2rtc)
+        Write-Host " -> Étape 3 : rt2rtc..." -ForegroundColor Magenta
+        $CurrentDir = Get-Location
         Set-Location $TargetLocalDir
         & $RtcCommand "." -s 32 -e 48 -c 512 -p
-        $ExitCode = $LASTEXITCODE
-        Set-Location $OldPath
+        $StatusRTC = $LASTEXITCODE
+        Set-Location $CurrentDir
         
-        if ($ExitCode -ne 0) { throw "Erreur rt2rtc sur l'index $Index" }
+        if ($StatusRTC -ne 0) { throw "Erreur lors du rt2rtc" }
 
-        # 6. Nettoyage Local (.rt volumineux)
-        if (Test-Path $LocalFile) { Remove-Item $LocalFile -Force }
+        # 7. Nettoyage et Déplacement
+        Write-Host " -> Étape 4 : Finalisation..." -ForegroundColor Green
+        if (Test-Path $LocalFile) { Remove-Item $LocalFile -Force } # Supprime le .rt lourd
 
-        # 7. Déplacement final vers H:
-        Write-Host " -> Étape 4 : Déplacement vers $OutputPath" -ForegroundColor Green
         if (!(Test-Path $FinalDestination)) { New-Item -ItemType Directory -Path $FinalDestination -Force | Out-Null }
-        
-        # On déplace tout le contenu (fichiers .rtc et .idx)
-        Move-Item -Path "$TargetLocalDir\*" -Destination $FinalDestination -Force
-        
-        # On supprime le dossier de travail vide
+        Move-Item -Path "$TargetLocalDir\*" -Destination $FinalDestination -Force -Confirm:$false
         Remove-Item $TargetLocalDir -Recurse -Force
 
     } catch {
-        Write-Host "[ERREUR CRITIQUE] Index $Index : $($_.Exception.Message)" -ForegroundColor Red
-        Write-Host "Le script va tenter de passer à l'index suivant dans 10 secondes..."
-        Start-Sleep -Seconds 10
+        Write-Host "[ERREUR] Problème sur l'index $Index : $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host "Pause de 5 secondes avant la suite..."
+        Start-Sleep -Seconds 5
     }
 }
 
-Write-Host "`nTerminé ! Tous les fichiers ont été traités." -ForegroundColor Cyan -BackgroundColor DarkBlue
+Write-Host "`nTRAVAIL TERMINÉ !" -ForegroundColor White -BackgroundColor DarkGreen
