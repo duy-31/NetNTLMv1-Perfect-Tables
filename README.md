@@ -103,7 +103,7 @@ The full dataset is massive. I am hosting a **Public Torrent** of the compacted 
 ## 📊 Progress Tracking
 Current status of the conversion and seeding:
 - [x] Index 0-1000 (Processing...) ⏳ 
-- [x] Index 1001-2000 (Torrent Hashing in progress...) ⏳ 
+- [x] Index 1001-2000 - Seeding 🚀 [Download Set (Magnet Link)](magnet:?xt=urn:btih:31731bd4fb93a1771b1a300b20ee87bc951b9a63&dn=1001-2000&xl=1341075609150&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.theoks.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.armun.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.nanoha.org%3A443%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce)
 - [x] Index 2001-3000 (Processing...) ⏳ 
 - [ ] Index 3001-4096 (Pending)
       
