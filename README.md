@@ -102,7 +102,7 @@ The full dataset is massive. I am hosting a **Public Torrent** of the compacted 
 
 ## 📊 Progress Tracking
 Current status of the conversion and seeding:
-- [x] Index 0-1000 (Processing...) ⏳ 
+- [x] Index 0-1000 (Torrent Hashing in progress...) ⏳ 
 - [x] **Index 1001-2000** — Seeding 🚀 
   > **🧲 - **Copy/Paste Magnet Link:**
 > ```text
@@ -110,8 +110,8 @@ Current status of the conversion and seeding:
 > ```
   > 
   > **Info Hash:** `31731BD4FB93A1771B1A300B20EE87BC951B9A63`
-- [x] Index 2001-3000 (Processing...) ⏳ 
-- [ ] Index 3001-4096 (Pending)
+- [x] Index 2001-3000 (Torrent Hashing in progress...) ⏳ 
+- [ ] Index 3001-4096 (Processing...) ⏳ 
       
 ---
 ## ⚖️ Responsibilities & Disclaimer
