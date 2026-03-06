@@ -108,15 +108,19 @@ Current status of the conversion and seeding:
 > magnet:?xt=urn:btih:0bf8239b4483536739bab75e312e4e3f3be8f7b7&dn=0-1000&xl=1342416684388&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.nanoha.org%3A443%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.armun.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.theoks.net%3A6969%2Fannounce
 > ```
 
-- [x] **Index 1001-2000** — Seeding 🚀 
+- [x] Index 1001-2000 — Seeding 🚀 
   > **🧲 - **Copy/Paste Magnet Link:**
 > ```text
 > magnet:?xt=urn:btih:31731bd4fb93a1771b1a300b20ee87bc951b9a63&dn=1001-2000&xl=1341075609150&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.theoks.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.armun.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.nanoha.org%3A443%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce
 > ```
-  > 
-  > **Info Hash:** `31731BD4FB93A1771B1A300B20EE87BC951B9A63`
-- [x] Index 2001-3000 (Torrent Hashing in progress...) ⏳ 
-- [ ] Index 3001-4095 (Torrent Hashing in progress...) ⏳ 
+
+- [x] Index 2001-3000 — Seeding 🚀 
+  > **🧲 - **Copy/Paste Magnet Link:**
+> ```text
+> magnet:?xt=urn:btih:2de621588b018c5239d96e6b4e88f21f2350edfa&dn=2001-3000&xl=1341075634420&tr=udp%3A%2F%2Ftracker.armun.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.theoks.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=https%3A%2F%2Ftracker.nanoha.org%3A443%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce
+> ```
+
+- [x] Index 3001-4095 (Torrent Hashing in progress...) ⏳ 
       
 ---
 ## ⚖️ Responsibilities & Disclaimer
