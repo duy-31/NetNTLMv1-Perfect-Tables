@@ -116,7 +116,7 @@ Current status of the conversion and seeding:
   > 
   > **Info Hash:** `31731BD4FB93A1771B1A300B20EE87BC951B9A63`
 - [x] Index 2001-3000 (Torrent Hashing in progress...) ⏳ 
-- [ ] Index 3001-4096 (Processing...) ⏳ 
+- [ ] Index 3001-4095 (Torrent Hashing in progress...) ⏳ 
       
 ---
 ## ⚖️ Responsibilities & Disclaimer
