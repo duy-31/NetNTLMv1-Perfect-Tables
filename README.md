@@ -101,6 +101,9 @@ The full dataset is massive. I am hosting a **Public Torrent** of the compacted 
 ---
 
 ## 📊 Progress Tracking
+
+<img width="647" height="128" alt="image" src="https://github.com/user-attachments/assets/fcfc7213-ea69-4fa1-97cf-8a566615c4a7" />
+
 Current status of the conversion and seeding:
 - [x] Index 0-1000 — Seeding 🚀
   > **🧲 - **Copy/Paste Magnet Link:**
