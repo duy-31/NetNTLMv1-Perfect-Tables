@@ -120,7 +120,11 @@ Current status of the conversion and seeding:
 > magnet:?xt=urn:btih:2de621588b018c5239d96e6b4e88f21f2350edfa&dn=2001-3000&xl=1341075634420&tr=udp%3A%2F%2Ftracker.armun.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.theoks.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=https%3A%2F%2Ftracker.nanoha.org%3A443%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce
 > ```
 
-- [x] Index 3001-4095 (Torrent Hashing in progress...) ⏳ 
+- [x] Index 3001-4095 — Seeding 🚀 
+  > **🧲 - **Copy/Paste Magnet Link:**
+> ```text
+> magnet:?xt=urn:btih:acc14924b4892e87b94ffaa8f9c60ca263f30973&dn=3001-4095&xl=1468477884160&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.nanoha.org%3A443%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.theoks.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.armun.net%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce
+> ```
       
 ---
 ## ⚖️ Responsibilities & Disclaimer
