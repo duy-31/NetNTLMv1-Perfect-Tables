@@ -1,3 +1,9 @@
+### 26-06-06 1 DEAD HDD ###
+currently rebuilding the Tables
+lost(RIP) one of the 2 HDD (4To) disks that old the data (raid0)
+###########################
+
+
 # ⚡ NetNTLMv1-Perfect-Tables (Indices 0-4096) ⚡
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
