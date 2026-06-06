@@ -1,7 +1,4 @@
-### 26-06-06 1 DEAD HDD ###
-currently rebuilding the Tables
-lost(RIP) one of the 2 HDD (4To) disks that old the data (raid0)
-###########################
+> ⚠️ **Incident Report (26-06-06):** One of my 4TB storage HDDs (RAID 0 array) suffered a fatal failure. The tables are currently being actively rebuilt. Progress and availability might be temporarily affected.
 
 
 # ⚡ NetNTLMv1-Perfect-Tables (Indices 0-4096) ⚡
@@ -94,6 +91,20 @@ The original data and research were provided by **Mandiant (Google Cloud)**. Thi
 https://github.com/user-attachments/assets/c2c5f152-1a87-480a-a98b-644531d11251
 
 ---
+
+## 🥺 Troubleshootings
+clBuildProgram failed.
+<img width="945" height="608" alt="image" src="https://github.com/user-attachments/assets/37ad2830-c8db-4064-9d68-78ab14ca17cb" />
+
+with new cuda driver, crackalack_lookup may fail. You have to disable CUDA CACHE.
+Under powershell:
+
+$env:CUDA_CACHE_DISABLE=1
+$env:NV_OPENCL_COMPILER_WARNINGS=1
+
+<img width="1320" height="652" alt="image" src="https://github.com/user-attachments/assets/31b115b8-ec7a-4b61-a182-06a890e17f38" />
+
+
 
 ## 🧲 Torrent & Community Seeding
 The full dataset is massive. I am hosting a **Public Torrent** of the compacted `.rtc` files. 
