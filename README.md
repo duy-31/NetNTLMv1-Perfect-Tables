@@ -1,5 +1,5 @@
 > ⚠️ **Incident Report (26-06-06):** One of my 4TB storage HDDs (RAID 0 array) suffered a fatal failure. The tables are currently being actively rebuilt. Progress and availability might be temporarily affected.
-
+> ✅ rebuild done. Torrents are up again 🎊
 
 # ⚡ NetNTLMv1-Perfect-Tables (Indices 0-4096) ⚡
 
